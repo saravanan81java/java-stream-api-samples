@@ -2,7 +2,7 @@ package com.sample.entity;
 
 public class Department {
 	
-	private int  departmentId;
+    private int  departmentId;
     private String departmentName;
     
     public Department(int departmentId, String departmentName) {
