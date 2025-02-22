@@ -2,7 +2,7 @@ package com.sample.DTO;
 
 public class DepartmentDTO {
 	
-	private int  departmentId;
+    private int  departmentId;
     private String departmentName;
     
     public DepartmentDTO(int departmentId, String departmentName) {
