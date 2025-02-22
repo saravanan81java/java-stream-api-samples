@@ -11,6 +11,9 @@ The Java 8 Stream map() is an intermediate operation. It converts Stream<obj1> t
 
 ## Example 1- Convert List of Employee to List of EmployeeDTO
 
+<details>
+<summary>Code Section</summary>
+
 ## Employee.java 
 
 package com.sample.entity;
@@ -74,7 +77,7 @@ public class Employee {
 		return "Employee [id=" + id + ", name=" + name + ", email=" + email + ", phone=" + phone + ", department="+ department + "]";
 	}
 }
-
+ 
 ## Department
 
 package com.sample.entity;
@@ -280,4 +283,34 @@ EmployeeDTO [id=7, name=Arun, phone=67890012345, departmentDTO=DepartmentDTO </b
 EmployeeDTO [id=8, name=Karthik, phone=78900123456, departmentDTO=DepartmentDTO </br>
 EmployeeDTO [id=9, name=Kumar, phone=89001234567, departmentDTO=DepartmentDTO </br>
 EmployeeDTO [id=10, name=Vignesh, phone=90012345678, departmentDTO=DepartmentDTO </br>
+</details>
 
+## Example 2- Convert List of Employee to List of EmployeeDTO
+<details>
+	<summary>Code Section</summary>
+
+## StreamApiSample
+	
+import java.util.Arrays;
+import java.util.List;
+import com.sample.entity.Department;
+import com.sample.entity.Employee;
+import com.sample.mapper.Mapper;
+
+public class StreamApiSample {
+	public static void main(String arg[]) {
+		System.out.println("Convert List of String to List of Integer");
+		List<String> list = Arrays.asList( "8" , "7", "36", "2" );
+		List<Integer> intList = list.stream().map(s -> Integer.parseInt(s)).collect(Collectors.toList());
+		intList.stream().forEach(obj -> System.out.println(obj));    
+	}
+}
+
+## Output
+
+Convert List of String to List of Integer
+8
+7
+36
+2
+</details>
