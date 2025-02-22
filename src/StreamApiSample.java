@@ -25,6 +25,9 @@ public class StreamApiSample {
 		Mapper mapper = new Mapper(listOfEmployee);
 		mapper.map().stream().forEach(emp -> System.out.println(emp));
 		
+		List<String> list = Arrays.asList( "8" , "7", "36", "2" );
+	    List<Integer> intList = list.stream().map(s -> Integer.parseInt(s)).collect(Collectors.toList());
+	    intList.stream().forEach(obj -> System.out.println(obj));    
 	}
 
 }
