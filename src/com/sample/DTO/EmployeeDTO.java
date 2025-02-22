@@ -2,7 +2,7 @@ package com.sample.DTO;
  
 public class EmployeeDTO {
 	
-	private int id;
+    private int id;
     private String name;
     private String email;
     private String phone;
