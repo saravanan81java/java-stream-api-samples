@@ -10,7 +10,7 @@ import com.sample.entity.Employee;
 
 public class Mapper {
 	
-	private List<Employee> employee = new ArrayList<Employee>();
+    private List<Employee> employee = new ArrayList<Employee>();
 
     public Mapper(List<Employee> employees) {
         this.employee = employees;
