@@ -363,4 +363,17 @@ public class StreamApiSample {
 		listOfEmpByDepCount.forEach((departmentName, empCount) -> System.out.println(departmentName +", "+ empCount));	
 	}
 }
+
+# Output
+
+------List of Employees by department------
+Civil Engineering, [EmployeeDTO [id=2, name=Seenu, phone=12345678900, departmentDTO=DepartmentDTO], EmployeeDTO [id=6, name=Tharun, phone=56789001234, departmentDTO=DepartmentDTO]]
+Computer Science, [EmployeeDTO [id=1, name=Saravanan, phone=01234567890, departmentDTO=DepartmentDTO], EmployeeDTO [id=3, name=Ramu, phone=23456789001, departmentDTO=DepartmentDTO], EmployeeDTO [id=5, name=Seyon, phone=45678900123, departmentDTO=DepartmentDTO], EmployeeDTO [id=7, name=Arun, phone=67890012345, departmentDTO=DepartmentDTO], EmployeeDTO [id=9, name=Kumar, phone=89001234567, departmentDTO=DepartmentDTO]]
+EEE Engineering, [EmployeeDTO [id=8, name=Karthik, phone=78900123456, departmentDTO=DepartmentDTO], EmployeeDTO [id=10, name=Vignesh, phone=90012345678, departmentDTO=DepartmentDTO]]
+Mechanical Engineering, [EmployeeDTO [id=4, name=Shankar, phone=34567890012, departmentDTO=DepartmentDTO]]
+------Employees count based department-----
+Civil Engineering, 2
+Computer Science, 5
+EEE Engineering, 2
+Mechanical Engineering, 1
 </details>
