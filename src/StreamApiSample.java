@@ -1,6 +1,9 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
+import com.sample.DTO.EmployeeDTO;
 import com.sample.entity.Department;
 import com.sample.entity.Employee;
 import com.sample.mapper.Mapper;
@@ -25,9 +28,21 @@ public class StreamApiSample {
 		Mapper mapper = new Mapper(listOfEmployee);
 		mapper.map().stream().forEach(emp -> System.out.println(emp));
 		
-		List<String> list = Arrays.asList( "8" , "7", "36", "2" );
-	    List<Integer> intList = list.stream().map(s -> Integer.parseInt(s)).collect(Collectors.toList());
-	    intList.stream().forEach(obj -> System.out.println(obj));    
+		Map<String, List<EmployeeDTO>> listOfEmpByDep = mapper.map().stream()
+				.collect(Collectors.groupingBy(empDTO -> empDTO.getDepartmentDTO().getDepartmentName()));
+		System.out.println("------List of Employees by department------");
+		listOfEmpByDep.forEach((departmentName, empList) -> System.out.println(departmentName +", "+ empList));
+		 
+		System.out.println("------Employees count based department-----");
+		Map<String, Long> listOfEmpByDepCount = mapper
+				.map()
+				.stream()
+				.collect(Collectors.groupingBy(empDTO -> 
+				empDTO.getDepartmentDTO().getDepartmentName(), 
+				Collectors.counting()));
+		
+		listOfEmpByDepCount.forEach((departmentName, empCount) -> System.out.println(departmentName +", "+ empCount));
+		
 	}
 
 }
