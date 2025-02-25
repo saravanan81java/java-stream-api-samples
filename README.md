@@ -318,7 +318,7 @@ Convert List of String to List of Integer
 2
 </details>
 
-## Example 3- List of Employees by department
+## Example 3- List of Employees, Count by Department
 <details>
 	<summary>Code Section</summary>
 
